@@ -1,0 +1,25 @@
+package com.example.project.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.project.Models.MiniGame;
+import com.example.project.Repository.MiniGameRepository;
+
+@Service
+public class MiniGameService {
+	
+	private final MiniGameRepository miniGameRepository;
+	
+	public MiniGameService(MiniGameRepository miniGameRepository) {
+		this.miniGameRepository = miniGameRepository;
+	}
+	
+	public MiniGame getMiniGameById(Long id) {
+		
+		return this.miniGameRepository.findById(id).get();
+		
+	}
+	
+	
+	
+}

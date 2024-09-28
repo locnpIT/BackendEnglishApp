@@ -1,0 +1,5 @@
+package com.example.project.Response;
+
+public class MiniGameResponse {
+
+}
