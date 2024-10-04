@@ -1,0 +1,22 @@
+package com.example.project.Models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "ContentOfGrammarDetail")
+public class ContentOfDetailGrammar {
+	
+	private Long id;
+	
+	private String congThuc;
+	
+	private String cachDung;
+	
+	private String luuY;
+	
+	private String viDu
+	
+	
+
+}

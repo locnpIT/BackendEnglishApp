@@ -1,0 +1,17 @@
+package com.example.project.Models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Grammar")
+public class Grammar {
+	
+	private Long id;
+	
+	private String name;
+	
+	
+	
+	
+}
