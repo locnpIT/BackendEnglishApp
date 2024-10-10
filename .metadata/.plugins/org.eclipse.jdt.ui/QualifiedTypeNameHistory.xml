@@ -30,11 +30,6 @@
     <fullyQualifiedTypeName name="com.example.project.Models.MiniGame"/>
     <fullyQualifiedTypeName name="com.example.project.Response.MiniGameResponse"/>
     <fullyQualifiedTypeName name="com.example.project.Request.MiniGameRequest"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
@@ -52,4 +47,10 @@
     <fullyQualifiedTypeName name="javax.smartcardio.Card"/>
     <fullyQualifiedTypeName name="com.example.project.Models.FlashCard"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
 </qualifiedTypeNameHistroy>
