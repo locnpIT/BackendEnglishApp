@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.project.DTO.RegisterDTO;
 import com.example.project.Models.User;
+import com.example.project.Request.LoginRequest;
+import com.example.project.Response.AuthResponse;
 import com.example.project.Service.UserService;
 
 @RestController
@@ -20,9 +22,15 @@ public class AuthController {
 	}
 	
 	@PostMapping("/register")
-	public User createUser(@RequestBody RegisterDTO req)  throws Exception {
-		User createUser = this.userService.registerUser(req);
+	public AuthResponse createUser(@RequestBody RegisterDTO req)  throws Exception {
+		AuthResponse createUser = this.userService.registerUser(req);
 		return createUser;
+	}
+	
+	@PostMapping("/login")
+	public AuthResponse login(@RequestBody LoginRequest reqUser) {
+		AuthResponse authResponse = this.userService.loginUser(reqUser);
+		return authResponse;
 	}
 	
 }

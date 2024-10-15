@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 		User user = this.userRepository.findByEmail(username);
 		
 		if(user == null) {
-			throw new UsernameNotFoundException(username);
+			throw new UsernameNotFoundException("User not found with email " + username);
 		}
 		
 		List<GrantedAuthority> authorities = new ArrayList<>();
