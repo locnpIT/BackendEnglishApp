@@ -69,14 +69,14 @@
 		</dependency>
 		
 		
-		<!-- Dependency for spring security -->
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		
 		
-		<!-- Dependency for JWT -->
+
 		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

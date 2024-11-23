@@ -18,7 +18,6 @@ public class GrammarDetail {
 	
 	private String shortDescription;
 	
-	private String details;
 
 	public Long getId() {
 		return id;
@@ -44,13 +43,6 @@ public class GrammarDetail {
 		this.shortDescription = shortDescription;
 	}
 
-	public String getDetails() {
-		return details;
-	}
-
-	public void setDetails(String details) {
-		this.details = details;
-	}
 	
 	
 	
