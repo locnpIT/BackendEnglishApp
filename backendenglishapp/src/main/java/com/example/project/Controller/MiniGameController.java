@@ -15,7 +15,7 @@ import com.example.project.Response.MiniGameResponse;
 import com.example.project.Service.MiniGameService;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api")
 public class MiniGameController {
 
 	private final MiniGameService miniGameService;
