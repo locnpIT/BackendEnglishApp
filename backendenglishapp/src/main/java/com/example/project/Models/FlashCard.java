@@ -13,10 +13,21 @@ public class FlashCard {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	private String front;
 	
-	private String back;
+	// front
+	private String tuVung;
+	
+	private String amThanh;
+	
+	private String phienAm;
+	
+	private String cachDung;
+	
+	
+	//back
+	private String dichNghia;
+	
+	private String hinhAnh;
 
 	public Long getId() {
 		return id;
@@ -26,21 +37,60 @@ public class FlashCard {
 		this.id = id;
 	}
 
-	public String getFront() {
-		return front;
+	public String getTuVung() {
+		return tuVung;
 	}
 
-	public void setFront(String front) {
-		this.front = front;
+	public void setTuVung(String tuVung) {
+		this.tuVung = tuVung;
 	}
 
-	public String getBack() {
-		return back;
+	public String getAmThanh() {
+		return amThanh;
 	}
 
-	public void setBack(String back) {
-		this.back = back;
+	public void setAmThanh(String amThanh) {
+		this.amThanh = amThanh;
 	}
+
+	public String getPhienAm() {
+		return phienAm;
+	}
+
+	public void setPhienAm(String phienAm) {
+		this.phienAm = phienAm;
+	}
+
+	public String getCachDung() {
+		return cachDung;
+	}
+
+	public void setCachDung(String cachDung) {
+		this.cachDung = cachDung;
+	}
+
+	public String getDichNghia() {
+		return dichNghia;
+	}
+
+	public void setDichNghia(String dichNghia) {
+		this.dichNghia = dichNghia;
+	}
+
+	public String getHinhAnh() {
+		return hinhAnh;
+	}
+
+	public void setHinhAnh(String hinhAnh) {
+		this.hinhAnh = hinhAnh;
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	
 	

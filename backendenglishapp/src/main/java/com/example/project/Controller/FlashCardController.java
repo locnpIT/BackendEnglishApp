@@ -29,7 +29,7 @@ public class FlashCardController {
 		return this.flashCardService.createCard(cardReq);
 	}
 	
-	@GetMapping("/card/all")
+	@GetMapping("/cards")
 	public List<FlashCard> getAllFlashCard(){
 		return this.flashCardService.findAllFlashCard();
 	}
