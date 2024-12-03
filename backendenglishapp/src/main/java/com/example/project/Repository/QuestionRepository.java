@@ -16,4 +16,7 @@ public interface QuestionRepository extends JpaRepository<Questions, Long> {
 	 @Query("SELECT q FROM Questions q WHERE q.examSet.id = :idExamSet")
 	 public List<Questions> getQuestionByIdExamSet(@Param("idExamSet") int idExamSet);
 
+	 @Query("SELECT COUNT(q) FROM Questions q WHERE q.examSet.id = :idExamSet")
+	 int getNumberOfQuestionFromExamSet(@Param("idExamSet") int idExamSet);
+	 
 }

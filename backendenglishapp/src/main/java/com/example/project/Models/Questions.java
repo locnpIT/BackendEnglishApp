@@ -24,6 +24,7 @@ public class Questions {
 	private String option4;
 	private String correctAnswer;
 	private String explainCorrectAnswer;
+	private int numberQuestion;
 	
 	@ManyToOne
 	@JoinColumn(name = "examSet_id")
@@ -90,6 +91,13 @@ public class Questions {
 	public void setExamSet(ExamSet examSet) {
 		this.examSet = examSet;
 	}
+	public int getNumberQuestion() {
+		return numberQuestion;
+	}
+	public void setNumberQuestion(int numberQuestion) {
+		this.numberQuestion = numberQuestion;
+	}
+	
 	
 	
 	

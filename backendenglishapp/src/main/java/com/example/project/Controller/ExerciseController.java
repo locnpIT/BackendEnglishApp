@@ -51,5 +51,10 @@ public class ExerciseController {
 		return this.questionService.getQuestionsByIdExamSet(id);
 	}
 	
+	@GetMapping("/examsets/nums/{id}")
+	public int getNumberOfQuestionFromExamSet(@PathVariable int id) {
+		return this.questionService.getNumbersOfQuestionFromExamSet(id);
+	}
+	
 	
 }

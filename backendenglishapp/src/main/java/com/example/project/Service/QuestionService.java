@@ -13,6 +13,7 @@ import com.example.project.Response.QuestionResponse;
 public class QuestionService {
 
 	private final QuestionRepository questionRepository;
+
 	
 	public QuestionService(QuestionRepository questionRepository) {
 		this.questionRepository = questionRepository;
@@ -24,6 +25,10 @@ public class QuestionService {
 	
 	public List<Questions> getQuestionsByIdExamSet(int id){
 		return this.questionRepository.getQuestionByIdExamSet(id);
+	}
+	
+	public int getNumbersOfQuestionFromExamSet(int id) {
+		return this.questionRepository.getNumberOfQuestionFromExamSet(id);
 	}
 	
 	
