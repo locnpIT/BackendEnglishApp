@@ -28,5 +28,9 @@ public class VocabularyService {
 
 		return this.vocabularyRepository.findById(id).get();
 	}
+	
+	public List<Vocabulary> getAllVocabularyByIdType(Long id){
+		return this.vocabularyRepository.findVocabulariesByTypeId(id);
+	}
 
 }

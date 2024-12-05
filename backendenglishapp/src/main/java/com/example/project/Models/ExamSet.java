@@ -30,8 +30,12 @@ public class ExamSet {
 	
 	@ManyToOne
 	@JoinColumn(name = "TypeOfExamSet_Id")
+	@JsonIgnore
 	private TypeOfExamSet typeOfExamSet;
 	
+	@OneToMany(mappedBy = "examSet")
+	@JsonIgnore
+	private List<UserExamSet> listUserExamSet;
 	
 	
 	public int getId() {
@@ -56,6 +60,22 @@ public class ExamSet {
 
 	public void setListQuestions(List<Questions> listQuestions) {
 		this.listQuestions = listQuestions;
+	}
+
+	public TypeOfExamSet getTypeOfExamSet() {
+		return typeOfExamSet;
+	}
+
+	public void setTypeOfExamSet(TypeOfExamSet typeOfExamSet) {
+		this.typeOfExamSet = typeOfExamSet;
+	}
+
+	public List<UserExamSet> getListUserExamSet() {
+		return listUserExamSet;
+	}
+
+	public void setListUserExamSet(List<UserExamSet> listUserExamSet) {
+		this.listUserExamSet = listUserExamSet;
 	}
 	
 	

@@ -1,10 +1,15 @@
 package com.example.project.Models;
 
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,6 +27,10 @@ public class User {
 	
 	private String email;
 	private String password;
+	
+	@OneToMany(mappedBy = "user")
+	@JsonIgnore
+	private List<UserExamSet> listUserExamSet;
 
 	public Long getId() {
 		return id;
@@ -62,5 +71,15 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public List<UserExamSet> getListUserExamSet() {
+		return listUserExamSet;
+	}
+
+	public void setListUserExamSet(List<UserExamSet> listUserExamSet) {
+		this.listUserExamSet = listUserExamSet;
+	}
+	
+	
 
 }

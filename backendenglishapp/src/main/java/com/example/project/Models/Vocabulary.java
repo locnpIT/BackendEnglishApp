@@ -1,9 +1,13 @@
 package com.example.project.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,16 +20,15 @@ public class Vocabulary {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	private String iconRes;
 	private String word;
-	
-	private String meaning;
-	
+	private String definition;
 	private String example;
-
-	private String audio;
-	
-	private String image;
-
+	    
+	@ManyToOne
+	@JoinColumn(name = "TypeOfVocabulary_id")
+	@JsonIgnore
+	private TypeOfVocabulary typeOfVocabulary;
 	
 	public Long getId() {
 		return id;
@@ -43,12 +46,20 @@ public class Vocabulary {
 		this.word = word;
 	}
 
-	public String getMeaning() {
-		return meaning;
+	public String getIconRes() {
+		return iconRes;
 	}
 
-	public void setMeaning(String meaning) {
-		this.meaning = meaning;
+	public void setIconRes(String iconRes) {
+		this.iconRes = iconRes;
+	}
+
+	public String getDefinition() {
+		return definition;
+	}
+
+	public void setDefinition(String definition) {
+		this.definition = definition;
 	}
 
 	public String getExample() {
@@ -59,21 +70,17 @@ public class Vocabulary {
 		this.example = example;
 	}
 
-	public String getAudio() {
-		return audio;
+	public TypeOfVocabulary getTypeOfVocabulary() {
+		return typeOfVocabulary;
 	}
 
-	public void setAudio(String audio) {
-		this.audio = audio;
+	public void setTypeOfVocabulary(TypeOfVocabulary typeOfVocabulary) {
+		this.typeOfVocabulary = typeOfVocabulary;
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
+	
+	
+	
 	
 	
 	
